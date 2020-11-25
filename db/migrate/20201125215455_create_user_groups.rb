@@ -1,0 +1,10 @@
+class CreateUserGroups < ActiveRecord::Migration[6.0]
+  def change
+    create_table :user_groups do |t|
+      t.integer :userId
+      t.integer :groupId
+
+      t.timestamps
+    end
+  end
+end
