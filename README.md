@@ -1,24 +1,32 @@
-# README
+# Peer Evaluation Tool
+Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer
+CSE 3901 AU20    
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+Ruby: v6.0.3.2   
+Rails: v6.0.3.4
 
-Things you may want to cover:
+In the project directory, run the following command in order to set up the server:
 
-* Ruby version
+//
 
-* System dependencies
+Then, start the server with:
 
-* Configuration
+//
 
-* Database creation
+To view the server, go to 
 
-* Database initialization
+## Features
+  - Students
+    - Create peer evaluations for any/all group members, including rating and comments.
+    
+  - Administrators
+    - Populate class with students (names and emails)
+    - Create teams
+    - View scores assigned within teams
+    - Detect potentional problems 
+  
 
-* How to run the test suite
+## Testing?
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## About
