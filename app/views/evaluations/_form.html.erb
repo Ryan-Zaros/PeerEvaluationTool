@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= collection_select(:evaluation, :user_id, User.all, :id, :name) %>
   </div>
 
   <div class="field">
@@ -30,6 +30,28 @@
     <%= form.label :comment %>
     <%= form.text_area :comment %>
   </div>
+
+
+  <%= form.fields_for :evaluation_scores do |ff| %>
+    <div style="border: 1px solid black">
+      <div class="field">
+        <%= ff.label :user_id %>
+        <%= ff.collection_select(:user_id, User.all, :id, :name) %>
+      </div>
+
+      <div class="field">
+        <%= ff.label :comment %>
+        <%= ff.text_area :comment %>
+      </div>
+
+      <div class="field">
+        <%= ff.label :score %>
+        <%= ff.number_field :score %>
+      </div>  
+    </div>
+  <% end %>
+
+
 
   <div class="actions">
     <%= form.submit %>

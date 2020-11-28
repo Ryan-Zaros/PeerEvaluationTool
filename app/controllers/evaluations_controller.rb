@@ -15,6 +15,9 @@ class EvaluationsController < ApplicationController
   # GET /evaluations/new
   def new
     @evaluation = Evaluation.new
+    4.times {
+      @evaluation.evaluation_scores.build
+    }
   end
 
   # GET /evaluations/1/edit
@@ -69,6 +72,8 @@ class EvaluationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evaluation_params
-      params.require(:evaluation).permit(:user_id, :group_id, :comment, :assignment_id)
+      params.require(:evaluation).permit(
+        :user_id, :group_id, :comment, :assignment_id,
+        evaluation_scores_attributes: [ :id, :user_id, :comment, :score ])
     end
 end
