@@ -17,7 +17,7 @@ class EvaluationScoresControllerTest < ActionDispatch::IntegrationTest
 
   test "should create evaluation_score" do
     assert_difference('EvaluationScore.count') do
-      post evaluation_scores_url, params: { evaluation_score: { comment: @evaluation_score.comment, evaluationId: @evaluation_score.evaluationId, recipientUserId: @evaluation_score.recipientUserId, score: @evaluation_score.score } }
+      post evaluation_scores_url, params: { evaluation_score: { comment: @evaluation_score.comment, evaluation_id: @evaluation_score.evaluation_id, score: @evaluation_score.score, user_id: @evaluation_score.user_id } }
     end
 
     assert_redirected_to evaluation_score_url(EvaluationScore.last)
@@ -34,7 +34,7 @@ class EvaluationScoresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update evaluation_score" do
-    patch evaluation_score_url(@evaluation_score), params: { evaluation_score: { comment: @evaluation_score.comment, evaluationId: @evaluation_score.evaluationId, recipientUserId: @evaluation_score.recipientUserId, score: @evaluation_score.score } }
+    patch evaluation_score_url(@evaluation_score), params: { evaluation_score: { comment: @evaluation_score.comment, evaluation_id: @evaluation_score.evaluation_id, score: @evaluation_score.score, user_id: @evaluation_score.user_id } }
     assert_redirected_to evaluation_score_url(@evaluation_score)
   end
 

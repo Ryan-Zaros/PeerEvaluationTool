@@ -1,5 +1,4 @@
 class EvaluationScore < ApplicationRecord
-        belongs_to :user
-        belongs_to :evaluation
-  
+  belongs_to :evaluation
+  belongs_to :user
 end

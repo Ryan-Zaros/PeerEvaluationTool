@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  authorUserId: 1
-  teamId: 1
+  user: one
+  group: one
   comment: MyText
-  assignmentId: 1
+  assignment: one
 
 two:
-  authorUserId: 1
-  teamId: 1
+  user: two
+  group: two
   comment: MyText
-  assignmentId: 1
+  assignment: two

@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :authorUserId %>
-    <%= form.number_field :authorUserId %>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :teamId %>
-    <%= form.number_field :teamId %>
+    <%= form.label :group_id %>
+    <%= collection_select(:evaluation, :group_id, Group.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assignment_id %>
+    <%= collection_select(:evaluation, :assignment_id, Assignment.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= form.label :comment %>
     <%= form.text_area :comment %>
-  </div>
-
-  <div class="field">
-    <%= form.label :assignmentId %>
-    <%= form.number_field :assignmentId %>
   </div>
 
   <div class="actions">

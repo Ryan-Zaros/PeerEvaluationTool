@@ -4,10 +4,10 @@ one:
   name: MyText
   email: MyText
   password: MyText
-  roleId: 1
+  role: one
 
 two:
   name: MyText
   email: MyText
   password: MyText
-  roleId: 1
+  role: two

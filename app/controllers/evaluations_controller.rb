@@ -69,6 +69,6 @@ class EvaluationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evaluation_params
-      params.require(:evaluation).permit(:authorUserId, :teamId, :comment, :assignmentId)
+      params.require(:evaluation).permit(:user_id, :group_id, :comment, :assignment_id)
     end
 end

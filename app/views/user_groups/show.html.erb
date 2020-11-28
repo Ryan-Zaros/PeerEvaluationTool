@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Userid:</strong>
-  <%= @user_group.userId %>
+  <strong>User:</strong>
+  <%= @user_group.user.name %>
 </p>
 
 <p>
-  <strong>Groupid:</strong>
-  <%= @user_group.groupId %>
+  <strong>Group:</strong>
+  <%= @user_group.group.name %>
 </p>
 
 <%= link_to 'Edit', edit_user_group_path(@user_group) %> |

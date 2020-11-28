@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :userId %>
-    <%= form.number_field :userId %>
+    <%= form.label :user_id %>
+    <%= collection_select(:user_group, :user_id, User.all, :id, :name) %>
   </div>
 
   <div class="field">
-    <%= form.label :groupId %>
-    <%= form.number_field :groupId %>
+    <%= form.label :group_id %>
+    <%= collection_select(:user_group, :group_id, Group.all, :id, :name) %>
   </div>
 
   <div class="actions">

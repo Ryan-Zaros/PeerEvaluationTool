@@ -15,9 +15,9 @@ class EvaluationScoresTest < ApplicationSystemTestCase
     click_on "New Evaluation Score"
 
     fill_in "Comment", with: @evaluation_score.comment
-    fill_in "Evaluationid", with: @evaluation_score.evaluationId
-    fill_in "Recipientuserid", with: @evaluation_score.recipientUserId
+    fill_in "Evaluation", with: @evaluation_score.evaluation_id
     fill_in "Score", with: @evaluation_score.score
+    fill_in "User", with: @evaluation_score.user_id
     click_on "Create Evaluation score"
 
     assert_text "Evaluation score was successfully created"
@@ -29,9 +29,9 @@ class EvaluationScoresTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Comment", with: @evaluation_score.comment
-    fill_in "Evaluationid", with: @evaluation_score.evaluationId
-    fill_in "Recipientuserid", with: @evaluation_score.recipientUserId
+    fill_in "Evaluation", with: @evaluation_score.evaluation_id
     fill_in "Score", with: @evaluation_score.score
+    fill_in "User", with: @evaluation_score.user_id
     click_on "Update Evaluation score"
 
     assert_text "Evaluation score was successfully updated"

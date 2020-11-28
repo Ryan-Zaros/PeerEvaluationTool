@@ -14,10 +14,10 @@ class EvaluationsTest < ApplicationSystemTestCase
     visit evaluations_url
     click_on "New Evaluation"
 
-    fill_in "Assignmentid", with: @evaluation.assignmentId
-    fill_in "Authoruserid", with: @evaluation.authorUserId
+    fill_in "Assignment", with: @evaluation.assignment_id
     fill_in "Comment", with: @evaluation.comment
-    fill_in "Teamid", with: @evaluation.teamId
+    fill_in "Group", with: @evaluation.group_id
+    fill_in "User", with: @evaluation.user_id
     click_on "Create Evaluation"
 
     assert_text "Evaluation was successfully created"
@@ -28,10 +28,10 @@ class EvaluationsTest < ApplicationSystemTestCase
     visit evaluations_url
     click_on "Edit", match: :first
 
-    fill_in "Assignmentid", with: @evaluation.assignmentId
-    fill_in "Authoruserid", with: @evaluation.authorUserId
+    fill_in "Assignment", with: @evaluation.assignment_id
     fill_in "Comment", with: @evaluation.comment
-    fill_in "Teamid", with: @evaluation.teamId
+    fill_in "Group", with: @evaluation.group_id
+    fill_in "User", with: @evaluation.user_id
     click_on "Update Evaluation"
 
     assert_text "Evaluation was successfully updated"

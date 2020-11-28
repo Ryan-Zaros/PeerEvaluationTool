@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Authoruserid</th>
-      <th>Teamid</th>
+      <th>User</th>
+      <th>Group</th>
+      <th>Assignment</th>
       <th>Comment</th>
-      <th>Assignmentid</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @evaluations.each do |evaluation| %>
       <tr>
-        <td><%= evaluation.authorUserId %></td>
-        <td><%= evaluation.teamId %></td>
+        <td><%= evaluation.user.name %></td>
+        <td><%= evaluation.group.name %></td>
+        <td><%= evaluation.assignment.name %></td>
         <td><%= evaluation.comment %></td>
-        <td><%= evaluation.assignmentId %></td>
         <td><%= link_to 'Show', evaluation %></td>
         <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
         <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

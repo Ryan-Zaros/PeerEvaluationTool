@@ -14,8 +14,8 @@ class UserGroupsTest < ApplicationSystemTestCase
     visit user_groups_url
     click_on "New User Group"
 
-    fill_in "Groupid", with: @user_group.groupId
-    fill_in "Userid", with: @user_group.userId
+    fill_in "Group", with: @user_group.group_id
+    fill_in "User", with: @user_group.user_id
     click_on "Create User group"
 
     assert_text "User group was successfully created"
@@ -26,8 +26,8 @@ class UserGroupsTest < ApplicationSystemTestCase
     visit user_groups_url
     click_on "Edit", match: :first
 
-    fill_in "Groupid", with: @user_group.groupId
-    fill_in "Userid", with: @user_group.userId
+    fill_in "Group", with: @user_group.group_id
+    fill_in "User", with: @user_group.user_id
     click_on "Update User group"
 
     assert_text "User group was successfully updated"

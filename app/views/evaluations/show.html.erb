@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Authoruserid:</strong>
-  <%= @evaluation.authorUserId %>
+  <strong>User:</strong>
+  <%= @evaluation.user.name %>
 </p>
 
 <p>
-  <strong>Teamid:</strong>
-  <%= @evaluation.teamId %>
+  <strong>Group:</strong>
+  <%= @evaluation.group.name %>
+</p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @evaluation.assignment.name %>
 </p>
 
 <p>
   <strong>Comment:</strong>
   <%= @evaluation.comment %>
-</p>
-
-<p>
-  <strong>Assignmentid:</strong>
-  <%= @evaluation.assignmentId %>
 </p>
 
 <%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |

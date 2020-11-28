@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :roleId %>
-    <%= form.number_field :roleId %>
+    <%= form.label :role_id %>
+    <%= collection_select(:user, :role_id, Role.all, :id, :name) %>
   </div>
 
   <div class="actions">

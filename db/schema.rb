@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_215558) do
+ActiveRecord::Schema.define(version: 2020_11_27_231043) do
 
   create_table "assignments", force: :cascade do |t|
     t.text "name"
@@ -19,21 +19,26 @@ ActiveRecord::Schema.define(version: 2020_11_25_215558) do
   end
 
   create_table "evaluation_scores", force: :cascade do |t|
-    t.integer "evaluationId"
-    t.integer "recipientUserId"
+    t.integer "evaluation_id", null: false
+    t.integer "user_id", null: false
     t.text "comment"
     t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["evaluation_id"], name: "index_evaluation_scores_on_evaluation_id"
+    t.index ["user_id"], name: "index_evaluation_scores_on_user_id"
   end
 
   create_table "evaluations", force: :cascade do |t|
-    t.integer "authorUserId"
-    t.integer "teamId"
+    t.integer "user_id", null: false
+    t.integer "group_id", null: false
     t.text "comment"
-    t.integer "assignmentId"
+    t.integer "assignment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["assignment_id"], name: "index_evaluations_on_assignment_id"
+    t.index ["group_id"], name: "index_evaluations_on_group_id"
+    t.index ["user_id"], name: "index_evaluations_on_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -49,19 +54,30 @@ ActiveRecord::Schema.define(version: 2020_11_25_215558) do
   end
 
   create_table "user_groups", force: :cascade do |t|
-    t.integer "userId"
-    t.integer "groupId"
+    t.integer "user_id", null: false
+    t.integer "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_user_groups_on_group_id"
+    t.index ["user_id"], name: "index_user_groups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.text "name"
     t.text "email"
     t.text "password"
-    t.integer "roleId"
+    t.integer "role_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
+  add_foreign_key "evaluation_scores", "evaluations"
+  add_foreign_key "evaluation_scores", "users"
+  add_foreign_key "evaluations", "assignments"
+  add_foreign_key "evaluations", "groups"
+  add_foreign_key "evaluations", "users"
+  add_foreign_key "user_groups", "groups"
+  add_foreign_key "user_groups", "users"
+  add_foreign_key "users", "roles"
 end

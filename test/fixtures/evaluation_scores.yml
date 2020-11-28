@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  evaluationId: 1
-  recipientUserId: 1
+  evaluation: one
+  user: one
   comment: MyText
   score: 1
 
 two:
-  evaluationId: 1
-  recipientUserId: 1
+  evaluation: two
+  user: two
   comment: MyText
   score: 1
