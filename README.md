@@ -1,5 +1,6 @@
 # Peer Evaluation Tool
-Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer.\ 
+Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer.
+
 CSE 3901 AU20    
 
 ## Setup
