@@ -3,6 +3,12 @@ Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer.
 
 CSE 3901 (9417) AU20    
 
+## About
+The Peer Evaluation Tool is a web application that streamlines the collection, collation, and analysis of peer evaluations, which are
+vital for feedback in classes with team-based components, such as CSE 3901.
+
+In this application, users
+
 ## Setup
 Ruby: v6.0.3.2   
 Rails: v6.0.3.4
@@ -24,15 +30,16 @@ To view the webpage, navigate to the url given (e.g. ) in your browser (preferab
 
 ## Features
 Students
-  - Create peer evaluations for any/all group members, including rating and comments.
+  - Can view all groups and assignments (projects) for their class. 
+  - Ability to create peer evaluations for all group members.
+  - Evaluations include ratings as well as comments for each individual.
     
 Administrators
-  - Populate class with students (names and emails)
-  - Create teams
-  - View scores assigned within teams
-  - Detect potentional problems 
+  - Populate class with students (names and emails).
+  - Ability to create groups (teams).
+  - View evaluations (ratings, comments, etc.) assigned within groups.
+  - Opportunity to detect potentional problems within groups given evaluations. 
   
-
 ## Testing
 
-## About
+
