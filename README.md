@@ -1,5 +1,5 @@
 # Peer Evaluation Tool
-Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer.
+Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer
 
 CSE 3901 (9417) AU20    
 
@@ -8,7 +8,14 @@ The Peer Evaluation Tool is a web application that streamlines the collection, c
 vital for feedback in classes with team-based components, such as CSE 3901.
 
 In this application, users are defined as either students or instructors (administrators). Features for each type of user are listed below,
-along with the documentation about setting up the web application locally, as well as testing.
+along with the documentation about setting up the web application locally, testing, and future extensions.
+
+The application uses a database in order to store information and create relationships among entities. The complete, detailed structure 
+of the database can be found in the slideshow, which can found in this repository.
+
+As for the design process, from initialization to deployment, the first step was to create the desired database as well as figure out 
+attributes and relationships. From there, Ruby on Rails was used for streamlining development. After testing, the application was deployed
+out onto the web using Heroku.
 
 ## Setup
 Ruby: v6.0.3.2   
