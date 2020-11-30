@@ -50,4 +50,14 @@ Administrators
   
 ## Testing
 
+A testing directory is included within the repository. 
+
+## Extensions
+As of now, the application is fairly basic in terms of functionality. There is support for multiple group structures, meaning that
+users can belong to different teams (such as a project group in addition to a technology task group).
+
+We plan to add an authentication feature using the ruby gem Devise, which will prevent any forging of evaluations, as well as 
+define a boundary between the two types of users. It's likely that we will improve the styling/presentation of the application as well.
+Lastly, we may add additional features that we like from other groups' versions.
+
 
