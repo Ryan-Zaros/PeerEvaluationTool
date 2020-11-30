@@ -1,7 +1,6 @@
 <h1>Peer Evaluations</h1>
 <h3>by The Techbenders</h3>
 
-
 Links:
 <ol>
     <li>
@@ -22,10 +21,6 @@ Links:
 </ol>
 
 <div>
-    <% if current_user %>
-        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> 
-    <% else %>
-        <%= link_to 'Sign up', new_user_registration_path%> 
-        <%= link_to 'Sign in', new_user_session_path %> 
-    <%end %>
+    <%= link_to 'SIGN UP', new_user_path, :class => "button text-center" %>
+
 </div>
