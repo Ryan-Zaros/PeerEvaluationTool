@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :group_id %>
-    <%= collection_select(:evaluation, :group_id, Group.find(evaluation.group_id).name, :id, :name) %>
+    <%= collection_select(:evaluation, :group_id, Group.all, :id, :name) %>
   </div>
 
   <div class="field">
