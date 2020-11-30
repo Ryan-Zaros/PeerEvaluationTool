@@ -31,25 +31,15 @@
         <td><%# link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
 
-
       <% @groups.each do |group| %>
         <tr><% if user_signed_in? %>
               <td><%= link_to 'Show', user_groups_path(:group_id => group.id), :class => "btn btn-default" %>
 
-
-                  <!-- Show buttons to add new members to groups -->
                   <%= link_to 'Add Member', new_user_group_path(:group_id => group.id), :class => "btn btn-primary" %>
 
-                  <!-- Show evaluation results if any exist -->
-                  <% resultsExist = true %>
-
-                  <!-- Show option to see evaluation results if they exist --> 
-                  <% if resultsExist %>
-                    <%= link_to 'Results', evaluation_scores_path(:group_id => group.id), :class => "btn btn-primary" %>
-                  <% end %>
-
-                  <!-- Option to delete group --> 
-                  <%= link_to 'Delete', group, method: :delete, data: { confirm: 'Are you sure you want to delete ' + group.name + '?'}, :class => "btn btn-danger" %>
+                  <%= link_to 'See Evaluations', evaluation_scores_path(:group_id => group.id), :class => "btn btn-primary" %>
+                  
+                  <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure you want to delete ' + group.name + '?'}, :class => "btn btn-danger" %>
               </td>
         </tr>
       <% end %>
