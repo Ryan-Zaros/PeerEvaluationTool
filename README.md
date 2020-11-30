@@ -7,7 +7,8 @@ CSE 3901 (9417) AU20
 The Peer Evaluation Tool is a web application that streamlines the collection, collation, and analysis of peer evaluations, which are
 vital for feedback in classes with team-based components, such as CSE 3901.
 
-In this application, users
+In this application, users are defined as either students or instructors (administrators). Features for each type of user are listed below,
+along with the documentation about setting up the web application locally, as well as testing.
 
 ## Setup
 Ruby: v6.0.3.2   
