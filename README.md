@@ -1,7 +1,7 @@
 # Peer Evaluation Tool
 Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer.
 
-CSE 3901 AU20    
+CSE 3901 (9417) AU20    
 
 ## Setup
 Ruby: v6.0.3.2   
