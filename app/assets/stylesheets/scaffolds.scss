@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 body {
   background-color: #f5f5f5;
@@ -66,15 +68,11 @@ div.actions {
 label {
   display: block; }
 
-  .navbar ul {
-    list-style-type: none;
-    margin: auto;
-    overflow: hidden;
+  .navbar div {
     background-color: #333;
-    max-width: 100%;    
-    min-width: 1000px;
   }
-  
+
+
   .navbar li {
     float: left; 
   }
