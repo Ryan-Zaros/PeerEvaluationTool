@@ -38,15 +38,15 @@ To view the webpage, navigate to the url given (e.g. ) in your browser (preferab
 
 ## Features
 Students
-  - Can view all groups and assignments (projects) for their class. 
+  - Able to view all groups and assignments (projects) for their class. 
   - Ability to create peer evaluations for all group members.
   - Evaluations include ratings as well as comments for each individual.
     
 Administrators
-  - Populate class with students (names and emails).
-  - Ability to create groups (teams).
+  - Can populate class with students (names and emails).
+  - Able to create groups (teams).
   - View evaluations (ratings, comments, etc.) assigned within groups.
-  - Opportunity to detect potentional problems within groups given evaluations. 
+  - Opportunity to detect potential problems within groups given evaluations. 
   
 ## Testing
 
