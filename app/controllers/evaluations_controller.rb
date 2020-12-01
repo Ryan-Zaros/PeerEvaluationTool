@@ -1,6 +1,6 @@
 class EvaluationsController < ApplicationController
   before_action :set_evaluation, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, expect: [:show, :index]
+
   # GET /evaluations
   # GET /evaluations.json
   def index
@@ -28,7 +28,7 @@ class EvaluationsController < ApplicationController
   # POST /evaluations.json
   def create
     @evaluation = Evaluation.new(evaluation_params)
-    @evaluation.user = current_user
+
     respond_to do |format|
       if @evaluation.save
         format.html { redirect_to @evaluation, notice: 'Evaluation was successfully created.' }

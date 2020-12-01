@@ -1,0 +1,43 @@
+
+
+
+<h1>Update Roster</h1>
+<%= form_tag '/users/bulk_update' %>
+    <% @users.each do |user| %>
+        <%= fields_for "users[]", user do |form| %>
+            <div id="roster-fields" style="border: 1px solid black;">
+                <div class="field">
+                    <%= form.label :name %>
+                    <%= form.text_area :name %>
+                </div>
+
+                <div class="field">
+                    <%= form.label :email %>
+                    <%= form.text_area :email %>
+                </div>
+
+                <div class="field">
+                    <%= form.label :password %>
+                    <%= form.text_area :password %>
+                </div>
+
+                <div class="field">
+                    <%= form.label :role_id %>
+                    <%= collection_select(:user, :role_id, Role.all, :id, :name) %>
+                </div>   
+                <%= form.hidden_field :_destroy %>
+                <%= link_to "remove", '', onclick: "remove_item(this); return false" %>    
+            </div>
+        <% end %>
+    <% end %>  
+    
+    <%= submit_tag "Submit" %>
+<script>
+
+function remove_item(a) {
+    a.previousElementSibling.value = 1;
+    var fields = a.parentElement;
+    fields.style.display = "none";
+};
+
+</script>
