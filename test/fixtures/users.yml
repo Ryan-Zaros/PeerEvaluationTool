@@ -2,12 +2,10 @@
 
 one:
   name: MyText
-  email: MyText
-  password: MyText
+  email: MyText@yahoo.com
   role: one
 
 two:
   name: MyText
-  email: MyText
-  password: MyText
+  email: MyText@gmail.com
   role: two

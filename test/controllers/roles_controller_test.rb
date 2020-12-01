@@ -37,7 +37,7 @@ class RolesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update role' do
     patch role_url(@role), params: { role: { name: @role.name } }
-    assert_redirected_to role_url(@role)
+    assert_redirected_to users_url
   end
 
   test 'should destroy role' do

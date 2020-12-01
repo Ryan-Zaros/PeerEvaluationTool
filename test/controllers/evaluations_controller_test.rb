@@ -12,11 +12,6 @@ class EvaluationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should get new' do
-    get new_evaluation_url
-    assert_response :success
-  end
-
   test 'should create evaluation' do
     assert_difference('Evaluation.count') do
       post evaluations_url, params: { evaluation: { assignment_id: @evaluation.assignment_id, comment: @evaluation.comment, group_id: @evaluation.group_id, user_id: @evaluation.user_id } }
@@ -27,11 +22,6 @@ class EvaluationsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should show evaluation' do
     get evaluation_url(@evaluation)
-    assert_response :success
-  end
-
-  test 'should get edit' do
-    get edit_evaluation_url(@evaluation)
     assert_response :success
   end
 
