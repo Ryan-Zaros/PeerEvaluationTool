@@ -65,4 +65,5 @@ the styling of the site a bit as well. Lastly, we may add additional features th
 
 ## Links
 Google Slides used for our presentation: https://docs.google.com/presentation/d/17Ne_kdeNQK6vZDNV2h5_2eMIggbHjpUXa7T67wyv-ek/edit?usp=sharing
+
 Google Doc used for design, comments/notes, etc: https://docs.google.com/document/d/13zgqpkKJCrzyXVYWCwOumhWjgVB7LJ6faG_LlFQlvpU/edit?usp=sharing
