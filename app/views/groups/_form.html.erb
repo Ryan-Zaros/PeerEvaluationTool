@@ -16,7 +16,7 @@
     <%= f.text_area :name %>
   </div>
 
-  <h3>Users</h3>
+  <h3 style="text-align: left;">Users</h3>
   <div id="users">
     <%= f.fields_for :user_groups do |user_group| %>
       <%= render 'user_group_fields', :f => user_group %>

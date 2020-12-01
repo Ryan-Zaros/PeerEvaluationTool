@@ -36,6 +36,5 @@
         </table>
       <% end %>
     </div>
-  <%= link_to 'Add Member to Group', new_user_group_path(:group_id => @group.id), :class => "btn btn-primary" %> |
-<%= link_to 'Edit Group Name', edit_group_path(@group), :class => "btn btn-default" %> |
-<%= link_to 'Go Back', groups_path, :class => "btn btn-default" %>
+<%= link_to 'Edit Group Name or Members', edit_group_path(@group), :class => "btn btn-primary" %>
+<%= link_to 'Back', groups_path, :class => "btn btn-default" %>
