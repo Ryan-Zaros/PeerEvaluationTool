@@ -18,11 +18,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # GET /users/bulk_create
-  def bulk_create
-    @users = User.all
-  end
-
   # GET /users/1/edit
   def edit; end
 
@@ -34,7 +29,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        format.json { render :show, status: :created, location: '/' }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

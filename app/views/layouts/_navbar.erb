@@ -4,33 +4,33 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-    <a class="navbar-brand" href="/">Peer Evaluation Tool</a>
+    <a class="navbar-brand" href="/" style="color: white;">Peer Evaluation Tool</a>
     </div>
 
-    <ul class="nav navbar-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/users">Users</a></li>
-      <li><a href="/groups">Groups</a></li>
-      <li><a href="/assignments">Assignments</a></li>
-      <li><a href="/evaluations">Evaluations</a></li>
+    <ul class="nav navbar-nav" style="color: white;">
+      <li><a href="/" style="color: white;">Home</a></li>
+      <li><a href="/users" style="color: white;">Users</a></li>
+      <li><a href="/groups" style="color: white;">Groups</a></li>
+      <li><a href="/assignments" style="color: white;">Assignments</a></li>
+      <li><a href="/evaluations" style="color: white;">Evaluations</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
         <% if !user_signed_in? %>
           <li>
             <%= link_to new_user_registration_path do %>
-              <span class="glyphicon glyphicon-edit"></span>&nbsp;Sign Up
+              <span class="glyphicon glyphicon-edit" style="color: white;"></span>&nbsp;<span style="color: white;">Sign Up</span>
             <% end %>
           </li>
           <li>
             <%= link_to new_user_session_path do %>
-              <span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In
+              <span class="glyphicon glyphicon-log-in" style="color: white;"></span>&nbsp;<span style="color: white;">Sign In</span>
             <% end %>
           </li>        
         <% else %>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out
+              <span class="glyphicon glyphicon-log-out" style="color: white;"></span>&nbsp;<span style="color: white;">Sign Out</span>
             <% end %>
           </li>
         <% end %>

@@ -41,12 +41,6 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to group_url(@group)
   end
 
-  test 'should get edit' do
-    @evaluation = evaluations(:one)
-    get "/groups/#{@group.id}/evaluations/#{@evaluations.id}"
-    assert_response :success
-  end
-
   test 'should destroy group' do
     assert_difference('Group.count', -1) do
       delete group_url(@group)

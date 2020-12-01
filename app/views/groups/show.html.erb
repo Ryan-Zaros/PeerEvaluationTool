@@ -12,14 +12,9 @@
     <h2><strong>Evaluations:</strong></h2>
     <div class="group-evaluation">
       <% @group.evaluations.each do |evaluation| %>
-        <p>
-          <label>Author</label>
-          <span><%= evaluation.user.name %></span>
-        </p>
-        <p>
-          <label>Assignment</label>
-          <span><%= evaluation.assignment.name %></span>
-        </p>
+        <h2>
+          <span><%= evaluation.user.name %>: <%= evaluation.assignment.name %></span>
+        </h2>
         <p>
           <label>Overall Comment</label>
           <span><%= evaluation.comment %></span>
@@ -35,6 +30,7 @@
           </tr>
         <% end %>
         </table>
+        <br />
       <% end %>
     </div>
 <%= link_to 'Edit Group Name or Members', edit_group_path(@group), :class => "btn btn-primary" %>
