@@ -15,9 +15,12 @@ class EvaluationsController < ApplicationController
   # GET /evaluations/new
   def new
     @evaluation = Evaluation.new
-    4.times {
-      @evaluation.evaluation_scores.build
-    }
+    @evaluation.group_id = params[:group_id]
+    @users = Group.find(params[:group_id]).users
+
+    for user in @users
+      @evaluation.evaluation_scores.build(user_id: user.id)
+    end
   end
 
   # GET /evaluations/1/edit
@@ -28,6 +31,7 @@ class EvaluationsController < ApplicationController
   # POST /evaluations.json
   def create
     @evaluation = Evaluation.new(evaluation_params)
+    @evaluation.user = current_user
 
     respond_to do |format|
       if @evaluation.save
@@ -73,7 +77,7 @@ class EvaluationsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def evaluation_params
       params.require(:evaluation).permit(
-        :user_id, :group_id, :comment, :assignment_id,
+        :group_id, :comment, :assignment_id,
         evaluation_scores_attributes: [ :id, :user_id, :comment, :score ])
     end
 end

@@ -18,6 +18,15 @@
     </p>
 </div>
 
+<%= link_to 'Update Roster', '/roles/1/edit' %>
+<%= link_to 'View Teams', '/groups' %>
+
+
+<% @groups.each do |group| %>
+    <%= link_to "Create Evaluation for #{group.name}", "/groups/#{group.id}/evaluations/new" %>
+<% end %>
+
+<br />
 <ol>
     <li>
         <%= link_to 'New Evaluation', new_evaluation_path %>

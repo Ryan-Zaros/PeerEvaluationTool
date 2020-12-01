@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= collection_select(:evaluation, :user_id, User.all, :id, :name) %>
-  </div>
-
-  <div class="field">
     <%= form.label :group_id %>
     <%= collection_select(:evaluation, :group_id, Group.all, :id, :name) %>
   </div>
@@ -36,7 +31,7 @@
     <div style="border: 1px solid black">
       <div class="field">
         <%= ff.label :user_id %>
-        <%= ff.collection_select(:user_id, User.all, :id, :name) %>
+        <%= ff.collection_select(:user_id, @users, :id, :name) %>
       </div>
 
       <div class="field">

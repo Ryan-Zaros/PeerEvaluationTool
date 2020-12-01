@@ -9,59 +9,33 @@
     <% end %>
   <% end %><br>
     <h2><strong>Evaluations:</strong></h2>
-
-  <h1><%= @group.name %></h1>
-
-	<h2><strong>Members:</strong></h2>
-	<% if @group.user_group_ids.length == 0 %>
-		<%= "There are currently no members in this group." %>
-  <% else %>
-    <% @group.users.each do |user| %>
-      <%= user.name %>
-    <% end %>
-	<% end %><br>
-
-    <h2><strong>Evaluations:</strong></h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Evaluation Author</th>
-          <th>Project</th>
-          <th>Overall Comment</th>
-          <th>Member 1</th>
-          <th>Score</th>
-          <th>Comment</th>
-          <th>Member 2</th>
-          <th>Score</th>
-          <th>Comment</th>
-          <th>Member 3</th>
-          <th>Score</th>
-          <th>Comment</th>
-          <th>Member 4</th>
-          <th>Score</th>
-          <th>Comment</th>
-        </tr>
-      </thead>
-
-  <tbody>
-    <% @group.evaluations.each do |evaluation| %>
-      <td><%= evaluation.user.name %></td>
-      <td><%= evaluation.assignment.name %></td>
-      <td><%= evaluation.comment %></td>
-      <% evaluation.evaluation_scores.each do |evaluation_score| %>
-        <td> <%= evaluation_score.user.name %> </td> 
-        <td> <%= evaluation_score.score %> </td> 
-        <td> <%= evaluation_score.comment %> </td> 
+    <div class="group-evaluation">
+      <% @group.evaluations.each do |evaluation| %>
+        <p>
+          <label>Author</label>
+          <span><%= evaluation.user.name %></span>
+        </p>
+        <p>
+          <label>Assignment</label>
+          <span><%= evaluation.assignment.name %></span>
+        </p>
+        <p>
+          <label>Overall Comment</label>
+          <span><%= evaluation.comment %></span>
+        </p>
+        <label>Scores</label>
+        <table>
+          <% evaluation.evaluation_scores.each do |evaluation_score| %>
+              <tr>
+                <td> <%= evaluation_score.user.name %> </td>
+                <td> <%= evaluation_score.score %> </td>
+                <td> <%= evaluation_score.comment %> </td>
+              </tr>
+          </tr>
+        <% end %>
+        </table>
       <% end %>
-    <% end %>
-
-  <% if current_user.try(:admin?) %>
-	  <%= link_to 'Add Member to Group', new_membership_path(:group_id => @group.id), :class => "btn btn-primary" %>
-  <% end %>
-
+    </div>
   <%= link_to 'Add Member to Group', new_user_group_path(:group_id => @group.id), :class => "btn btn-primary" %> |
-
-
 <%= link_to 'Edit Group Name', edit_group_path(@group), :class => "btn btn-default" %> |
 <%= link_to 'Go Back', groups_path, :class => "btn btn-default" %>
-
