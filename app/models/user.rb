@@ -3,4 +3,6 @@ class User < ApplicationRecord
   has_many :evaluations
   has_many :evaluation_scores
   has_many :groups, through: :user_groups
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end
