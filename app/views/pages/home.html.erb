@@ -1,8 +1,23 @@
-<h1>Peer Evaluations</h1>
-<h3>by The Techbenders</h3>
+<h1>Peer Evaluation Tool</h1>
+<h3>CSE 3901: Project 6</h3>
+<h3>The Techbenders:</h3>
+<h3>Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer</h3>
 
+<div>
+    <h2>About</h2>
+    <p>
+    Welcome! Please Sign Up or Sign In to get started. <br><br>
+    If you are a student, you can navigate to the "Groups" tab in order to see your teams. You can
+    also create a New Evaluation. <br> Within there, you can choose which Group and Assignment you are
+    reviewing for, leave an overall comment, and give ratings<br> and comments for each of your teammates.
+    <br><br>
+    For instructors and other administrators, you are able to view all students and groups (as well as
+    create or destroy them),<br> along with all evaluations. In order to view a specific group, head to the
+    Groups tab and "See More" on a group.
+    </p>
+</div>
 
-Links:
+TO BE DELETED Links:
 <ol>
     <li>
         <%= link_to 'New Evaluation', new_evaluation_path %>
@@ -20,12 +35,3 @@ Links:
         <%= link_to 'Add User to Group', new_user_group_path %>
     </li>
 </ol>
-
-<div>
-    <% if current_user %>
-        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> 
-    <% else %>
-        <%= link_to 'Sign up', new_user_registration_path%> 
-        <%= link_to 'Sign in', new_user_session_path %> 
-    <%end %>
-</div>
