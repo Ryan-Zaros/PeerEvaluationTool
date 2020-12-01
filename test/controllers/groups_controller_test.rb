@@ -35,7 +35,6 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-
   test 'should update group' do
     patch group_url(@group), params: { group: { name: @group.name } }
     assert_redirected_to group_url(@group)

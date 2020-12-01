@@ -4,7 +4,7 @@ class Evaluation < ApplicationRecord
   belongs_to :user
   belongs_to :group
   belongs_to :assignment
-  has_many :evaluation_scores, :dependent => :delete_all
+  has_many :evaluation_scores, dependent: :delete_all
 
   accepts_nested_attributes_for :evaluation_scores
 end
