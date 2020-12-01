@@ -34,11 +34,19 @@ In the project directory, run the following command in order to create a local s
 rails server
 ```
 
-To view the webpage, navigate to the url given (e.g. ) in your browser (preferably Firefox).
+Possible Issues:
+  - May need to run ``rails generate devise:install`` to properly install the Devise gem.
+  - May need to run ``rails db:migrate`` to update the database.
+  - May need to resolve conflict in Gemfile.lock, making sure rails gem "cocoon" is included.
+  - Upon viewing, there may be errors involving users and/or devise.
+      - If so, 
+  
+
+To view the webpage, navigate to the url given (e.g. 127.0.0.1:3000) in your browser (preferably Firefox).
 
 ## Features
 Students
-  - Able to view all groups and assignments (projects) for their class. 
+  - Able to view all groups (teams) for their class, as well as users/members. 
   - Ability to create peer evaluations for all group members.
   - Evaluations include ratings as well as comments for each individual.
     
@@ -46,18 +54,14 @@ Administrators
   - Can populate class with students (names and emails).
   - Able to create groups (teams).
   - View evaluations (ratings, comments, etc.) assigned within groups.
-  - Opportunity to detect potential problems within groups given evaluations. 
-  
-## Testing
-
-A testing directory is included within the repository. 
+  - Opportunity to detect potential problems within groups given evaluations.  
 
 ## Extensions
-As of now, the application is fairly basic in terms of functionality. There is support for multiple group structures, meaning that
-users can belong to different teams (such as a project group in addition to a technology task group).
+As of now, there is support for multiple group structures, meaning that users can belong to different teams 
+(such as a project group in addition to a technology task group).
 
-We plan to add an authentication feature using the ruby gem Devise, which will prevent any forging of evaluations, as well as 
-define a boundary between the two types of users. It's likely that we will improve the styling/presentation of the application as well.
-Lastly, we may add additional features that we like from other groups' versions.
+Using the ruby gem Devise, there is also authentication support. This is not yet fully fleshed out, but will 
+prevent any forgery along with removing any posible dangerous actions from students. We also plan to improve 
+the styling of the site a bit as well. Lastly, we may add additional features that we like from other groups' versions.
 
 
