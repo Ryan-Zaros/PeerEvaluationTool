@@ -2,6 +2,6 @@
     <div class="field">
         <%= f.label :user_id %>
         <%= f.collection_select(:user_id, User.all, :id, :name) %>
+        <%= link_to_remove_association "Remove User", f, :class => "btn btn-danger" %>
     </div> 
-    <%= link_to_remove_association "remove user", f %>
 </div>

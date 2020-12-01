@@ -18,8 +18,8 @@
       <td><%= group.user_group_ids.length %></td>
 
       <td>
-          <%= link_to 'Show', group, :class => "btn btn-default" %>
-          <%= link_to 'Edit', edit_group_path(:id => group.id), :class => "btn btn-primary" %>
+          <%= link_to 'Show Details', group, :class => "btn btn-default" %>
+          <%= link_to 'Edit Name/Users', edit_group_path(:id => group.id), :class => "btn btn-primary" %>
           <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure you want to delete ' + group.name + '?'}, :class => "btn btn-danger" %> 
       </td>
 
