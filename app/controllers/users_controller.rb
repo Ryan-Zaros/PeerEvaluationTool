@@ -17,6 +17,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # GET /users/bulk_create
+  def bulk_create
+    @users = User.all
+  end
+
   # GET /users/1/edit
   def edit
   end
@@ -35,6 +40,14 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def bulk_update
+    User.update(params[:users].keys, params[:users].values)
+    # @users = User.find(params[:users])
+    # @users.each do |user|
+    #   user.update(params[:users][user])
+    # end
   end
 
   # PATCH/PUT /users/1
@@ -69,6 +82,10 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :role_id)
+      params.require(:user).permit(:name, :email, :password, :role_id, :_destroy, {
+        users: [
+          :name, :email, :password, :role_id, :_destroy
+        ]
+      })
     end
 end
