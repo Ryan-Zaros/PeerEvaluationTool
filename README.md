@@ -34,15 +34,14 @@ In the project directory, run the following command in order to create a local s
 rails server
 ```
 
-Possible Issues:
+To view the webpage, navigate to the url given (e.g. 127.0.0.1:3000) in your browser (preferably Firefox).
+
+Known Issues/Errors:
   - May need to run ``rails generate devise:install`` to properly install the Devise gem.
   - May need to run ``rails db:migrate`` to update the database.
   - May need to resolve conflict in Gemfile.lock, making sure rails gem "cocoon" is included.
-  - Upon viewing, there may be errors involving users and/or devise.
-      - If so, 
-  
-
-To view the webpage, navigate to the url given (e.g. 127.0.0.1:3000) in your browser (preferably Firefox).
+  - Upon viewing, there may be errors involving users and/or devise. If so, try the following
+  (or contact one of us):
 
 ## Features
 Students
@@ -64,4 +63,6 @@ Using the ruby gem Devise, there is also authentication support. This is not yet
 prevent any forgery along with removing any posible dangerous actions from students. We also plan to improve 
 the styling of the site a bit as well. Lastly, we may add additional features that we like from other groups' versions.
 
-
+## Links
+Google Slides used for our presentation: https://docs.google.com/presentation/d/17Ne_kdeNQK6vZDNV2h5_2eMIggbHjpUXa7T67wyv-ek/edit?usp=sharing
+Google Doc used for design, comments/notes, etc: https://docs.google.com/document/d/13zgqpkKJCrzyXVYWCwOumhWjgVB7LJ6faG_LlFQlvpU/edit?usp=sharing
