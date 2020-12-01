@@ -1,20 +1,40 @@
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #FFFFFF">
   <div class="container-fluid">
+
     <div class="navbar-header">
-     </div>
+    <a class="navbar-brand" >Peer Evaluation Tool</a>
+    </div>
 
-     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/users">Users</a></li>
+      <li><a href="/groups">Groups</a></li>
+      <li><a href="/assignments">Assignments</a></li>
+      <li><a href="/evaluations">Evaluations</a></li>
+      <li><a href="/evaluation_scores/new">New Evaluation</a></li>
+    </ul>
 
-        <li><%= link_to "Home", root_path %></li>
-        <li><a href="/users">Users</a></li>
-        <li><a href="/groups">Groups</a></li>
-        <li><a href="/assignments">Assignments</a></li>
-        <li><a href="/evaluations">Evaluations</a></li>
-        <li><a href="/evaluation_scores/new">New Evaluation</a></li>
-
+    <ul class="nav navbar-nav navbar-right">
+        <% if !user_signed_in? %>
+          <li>
+            <%= link_to new_user_registration_path do %>
+              <span class="glyphicon glyphicon-edit"></span>&nbsp;Sign Up
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_user_session_path do %>
+              <span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In
+            <% end %>
+          </li>        
+        <% else %>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out
+            <% end %>
+          </li>
+        <% end %>
       </ul>
-    
+
     </div>
   </div>
 </nav>

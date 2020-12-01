@@ -227,7 +227,10 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
+<<<<<<< HEAD
   cocoon
+=======
+>>>>>>> 1acfeaf32f916ea3d6c10a257e6765db50c6946a
   devise
   jbuilder (~> 2.7)
   jquery

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  match '/users',   to: 'users#index',   via: 'get'
+  devise_for :users
   root to: 'pages#home'
   resources :evaluation_scores
   resources :evaluations
