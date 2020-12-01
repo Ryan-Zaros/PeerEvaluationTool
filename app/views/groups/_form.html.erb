@@ -29,6 +29,9 @@
   
 
   <div class="actions">
-    <%= f.submit %>
+
+    <%= form.submit "Confirm", :class => "btn btn-primary" %>
+    <%= link_to 'Back', groups_path, :class => "btn btn-default" %>
+
   </div>
 <% end %>
