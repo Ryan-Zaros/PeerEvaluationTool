@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class EvaluationsController < ApplicationController
-  before_action :set_evaluation, only: [:show, :edit, :update, :destroy]
+  before_action :set_evaluation, only: %i[show edit update destroy]
 
   # GET /evaluations
   # GET /evaluations.json
@@ -9,8 +11,7 @@ class EvaluationsController < ApplicationController
 
   # GET /evaluations/1
   # GET /evaluations/1.json
-  def show
-  end
+  def show; end
 
   # GET /evaluations/new
   def new
@@ -18,8 +19,8 @@ class EvaluationsController < ApplicationController
     @evaluation.group_id = params[:group_id]
     @users = Group.find(params[:group_id]).users
 
-    for user in @users
-      @evaluation.evaluation_scores.build(user_id: user.id,score:7)
+    @users.each do |user|
+      @evaluation.evaluation_scores.build(user_id: user.id, score: 7)
     end
   end
 
@@ -70,15 +71,17 @@ class EvaluationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_evaluation
-      @evaluation = Evaluation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def evaluation_params
-      params.require(:evaluation).permit(
-        :group_id, :comment, :assignment_id,
-        evaluation_scores_attributes: [ :id, :user_id, :comment, :score ])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_evaluation
+    @evaluation = Evaluation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def evaluation_params
+    params.require(:evaluation).permit(
+      :group_id, :comment, :assignment_id,
+      evaluation_scores_attributes: %i[id user_id comment score]
+    )
+  end
 end

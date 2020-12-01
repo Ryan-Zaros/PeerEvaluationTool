@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
-    def home
-        if current_user
-            @groups = current_user.groups
-        else
-            @groups = []
-        end
-    end
+  def home
+    @groups = if current_user
+                current_user.groups
+              else
+                []
+              end
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateEvaluationScores < ActiveRecord::Migration[6.0]
   def change
     create_table :evaluation_scores do |t|

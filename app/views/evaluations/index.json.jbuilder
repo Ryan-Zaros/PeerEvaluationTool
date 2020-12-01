@@ -1,1 +1,3 @@
-json.array! @evaluations, partial: "evaluations/evaluation", as: :evaluation
+# frozen_string_literal: true
+
+json.array! @evaluations, partial: 'evaluations/evaluation', as: :evaluation

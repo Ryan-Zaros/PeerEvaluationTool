@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class UserGroupsController < ApplicationController
-  before_action :set_user_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_group, only: %i[show edit update destroy]
 
   # GET /user_groups
   # GET /user_groups.json
@@ -9,8 +11,7 @@ class UserGroupsController < ApplicationController
 
   # GET /user_groups/1
   # GET /user_groups/1.json
-  def show
-  end
+  def show; end
 
   # GET /user_groups/new
   def new
@@ -18,8 +19,7 @@ class UserGroupsController < ApplicationController
   end
 
   # GET /user_groups/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /user_groups
   # POST /user_groups.json
@@ -62,13 +62,14 @@ class UserGroupsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_group
-      @user_group = UserGroup.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_group_params
-      params.require(:user_group).permit(:user_id, :group_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_group
+    @user_group = UserGroup.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_group_params
+    params.require(:user_group).permit(:user_id, :group_id)
+  end
 end

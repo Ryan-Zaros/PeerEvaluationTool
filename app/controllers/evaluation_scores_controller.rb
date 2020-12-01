@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class EvaluationScoresController < ApplicationController
-  before_action :set_evaluation_score, only: [:show, :edit, :update, :destroy]
+  before_action :set_evaluation_score, only: %i[show edit update destroy]
 
   # GET /evaluation_scores
   # GET /evaluation_scores.json
@@ -9,8 +11,7 @@ class EvaluationScoresController < ApplicationController
 
   # GET /evaluation_scores/1
   # GET /evaluation_scores/1.json
-  def show
-  end
+  def show; end
 
   # GET /evaluation_scores/new
   def new
@@ -18,8 +19,7 @@ class EvaluationScoresController < ApplicationController
   end
 
   # GET /evaluation_scores/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /evaluation_scores
   # POST /evaluation_scores.json
@@ -62,13 +62,14 @@ class EvaluationScoresController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_evaluation_score
-      @evaluation_score = EvaluationScore.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def evaluation_score_params
-      params.require(:evaluation_score).permit(:evaluation_id, :user_id, :comment, :score)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_evaluation_score
+    @evaluation_score = EvaluationScore.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def evaluation_score_params
+    params.require(:evaluation_score).permit(:evaluation_id, :user_id, :comment, :score)
+  end
 end

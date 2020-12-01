@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_many :user_groups
   belongs_to :role
@@ -10,7 +12,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         def password_required? 
-          false 
-        end 
+  def password_required?
+    false
+  end
 end

@@ -1,1 +1,3 @@
-json.partial! "user_groups/user_group", user_group: @user_group
+# frozen_string_literal: true
+
+json.partial! 'user_groups/user_group', user_group: @user_group
