@@ -25,6 +25,7 @@ class EvaluationsController < ApplicationController
 
   # GET /evaluations/1/edit
   def edit
+    @users = Group.find(params[:group_id]).users
   end
 
   # POST /evaluations
