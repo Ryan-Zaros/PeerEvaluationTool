@@ -14,37 +14,17 @@
   <tbody>
     <% @groups.each do |group| %>
 
-      <% if user_signed_in? and !current_user.try(:admin?) %>
-          <% for i in 0...group.user_group_ids.length %>
-            <% if  current_user.user_group_ids.include? group.user_group_ids[i] %>
-              <tr>
-                <td><%= group.name %></td>
-                <td><%= group.user_group_ids.length %></td>
-                <td><%= link_to 'See Details', group, :class => "btn btn-default" %><br>
-              </tr>
-            <% end %>
-          <% end %>
-        <% end %>
+      <td><%= group.name %></td>
+      <td><%= group.user_group_ids.length %></td>
 
-        <td><%# link_to 'Show', group %></td>
-        <td><%# link_to 'Edit', edit_group_path(group) %></td>
-        <td><%# link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>
+          <%= link_to 'Show', group, :class => "btn btn-default" %>
+          <%= link_to 'Edit', edit_group_path(:id => group.id), :class => "btn btn-primary" %>
+          <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure you want to delete ' + group.name + '?'}, :class => "btn btn-danger" %> 
+      </td>
+
+    </tr>
     <% end %>
-
-      <% @groups.each do |group| %>
-        <tr><% if user_signed_in? %>
-              <td><%= link_to 'Show', user_groups_path(:group_id => group.id), :class => "btn btn-default" %>
-
-                  <%= link_to 'Add Member', new_user_group_path(:group_id => group.id), :class => "btn btn-primary" %>
-
-                  <%= link_to 'See Evaluations', evaluation_scores_path(:group_id => group.id), :class => "btn btn-primary" %>
-                  
-                  <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure you want to delete ' + group.name + '?'}, :class => "btn btn-danger" %>
-              </td>
-        </tr>
-      <% end %>
-    <% end %>
-
   </tbody>
 </table>
 
