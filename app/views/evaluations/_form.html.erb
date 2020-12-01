@@ -26,26 +26,30 @@
     <%= form.text_area :comment %>
   </div>
 
+    <h2> Team Members </h2>
+    <div class="row">
+      <%= form.fields_for :evaluation_scores do |ff| %>
+            <div class="col-sm-3">
+              <div class="field">
+                <%= ff.label :user_id %>
+                <%= ff.collection_select(:user_id, @users, :id, :name) %>
+              </div>
+        
+              <div class="field">
+                <%= ff.label :score %>
+                <%= ff.number_field :score %>
+              </div>
 
-  <%= form.fields_for :evaluation_scores do |ff| %>
-    <div style="border: 1px solid black">
-      <div class="field">
-        <%= ff.label :user_id %>
-        <%= ff.collection_select(:user_id, @users, :id, :name) %>
-      </div>
-
-      <div class="field">
-        <%= ff.label :comment %>
-        <%= ff.text_area :comment %>
-      </div>
-
-      <div class="field">
-        <%= ff.label :score %>
-        <%= ff.number_field :score %>
-      </div>  
+              <div class="form-group">
+                <div class="field">
+                  <%= ff.label :comment %>
+                  <%= ff.text_area :comment %>
+                </div>
+              </div>
+            </div>
+      <% end %>
     </div>
-  <% end %>
-
+     
 
 
   <div class="actions">

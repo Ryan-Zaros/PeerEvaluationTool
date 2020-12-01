@@ -19,7 +19,7 @@ class EvaluationsController < ApplicationController
     @users = Group.find(params[:group_id]).users
 
     for user in @users
-      @evaluation.evaluation_scores.build(user_id: user.id)
+      @evaluation.evaluation_scores.build(user_id: user.id,score:7)
     end
   end
 
