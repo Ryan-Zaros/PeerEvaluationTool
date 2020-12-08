@@ -79,9 +79,12 @@ Reset db:
 Push to Heroku:
 `git push heroku heroku-deploy:main`
 
+Info to get started: https://dashboard.heroku.com/apps/techbenders-peer-evaluation/deploy/heroku-git
+
+Heroku: https://dashboard.heroku.com/apps/techbenders-peer-evaluation
 
 Project Setup with Heroku and Postgres: https://devcenter.heroku.com/articles/getting-started-with-rails6
 
 Deploying to Heroku with Git: https://devcenter.heroku.com/articles/git
 
-
+Project is located at: https://techbenders-peer-evaluation.herokuapp.com/
