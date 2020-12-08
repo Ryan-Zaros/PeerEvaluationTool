@@ -67,3 +67,21 @@ the styling of the site a bit as well. Lastly, we may add additional features th
 Google Slides used for our presentation: https://docs.google.com/presentation/d/17Ne_kdeNQK6vZDNV2h5_2eMIggbHjpUXa7T67wyv-ek/edit?usp=sharing
 
 Google Doc used for design, comments/notes, etc: https://docs.google.com/document/d/13zgqpkKJCrzyXVYWCwOumhWjgVB7LJ6faG_LlFQlvpU/edit?usp=sharing
+
+## Heroku commands
+
+Migrate db:
+`heroku run rake db:migrate`
+
+Reset db:
+`heroku pg:reset postgresql-spherical-31670`
+
+Push to Heroku:
+`git push heroku heroku-deploy:main`
+
+
+Project Setup with Heroku and Postgres: https://devcenter.heroku.com/articles/getting-started-with-rails6
+
+Deploying to Heroku with Git: https://devcenter.heroku.com/articles/git
+
+
