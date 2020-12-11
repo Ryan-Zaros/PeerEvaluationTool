@@ -2,17 +2,13 @@
 
 <h1>Evaluations List</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Author</th>
-      <td></td>
       <th>Group</th>
-      <td></td>
       <th>Assignment</th>
-      <td></td>
       <th>Comment</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -20,11 +16,8 @@
     <% @evaluations.each do |evaluation| %>
       <tr>
         <td><%= evaluation.user.name %></td>
-        <td></td>
         <td><%= evaluation.group.name %></td>
-        <td></td>
         <td><%= evaluation.assignment.name %></td>
-        <td></td>
         <td><%= evaluation.comment %></td>
       </tr>
     <% end %>
