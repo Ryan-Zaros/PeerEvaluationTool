@@ -9,7 +9,7 @@
 
     <ul class="nav navbar-nav" style="color: white;">
       <li><a href="/" style="color: white;">Home</a></li>
-      <% if current_user.admin? %>
+      <% if user_signed_in? && current_user.admin? %>
         <li><a href="/users" style="color: white;">Users</a></li>
         <li><a href="/groups" style="color: white;">Groups</a></li>
         <li><a href="/assignments" style="color: white;">Assignments</a></li>
