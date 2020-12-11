@@ -37,14 +37,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def bulk_update
-    User.update(params[:users].keys, params[:users].values)
-    # @users = User.find(params[:users])
-    # @users.each do |user|
-    #   user.update(params[:users][user])
-    # end
-  end
-
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
