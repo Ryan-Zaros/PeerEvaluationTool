@@ -7,10 +7,10 @@
 * Added footer
 
 ## Important Notes
-Admin users can only be created in the command line, presumably by the developers
+PROFESSORS ARE NOT NECESSARILY ADMINS! Right now, admin users can only be created in the command line, presumably by the developers
 
-To create an admin user, run `rails console`, then
-`user=User.create!(:email=>'name@email.com',:name=>'name',:password=>'password',:role_id=2,:admin=true)`
+To create an admin user, run `heroku run rails console`, then
+`user=User.create!(:email=>'name@email.com',:name=>'name',:password=>'password',:role_id=>2,:admin=>true)`
 
 There is currently one admin user, with username="admin@yahoo.com" and password="password"
 
