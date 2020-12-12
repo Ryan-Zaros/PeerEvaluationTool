@@ -3,6 +3,10 @@ Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer
 
 CSE 3901 (9417) AU20    
 
+## Accessing the site
+
+You can find the site at: https://techbenders-peer-evaluation.herokuapp.com/
+
 ## About
 The Peer Evaluation Tool is a web application that streamlines the collection, collation, and analysis of peer evaluations, which are
 vital for feedback in classes with team-based components, such as CSE 3901.

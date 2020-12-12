@@ -14,4 +14,6 @@ To create an admin user, run `rails console`, then
 
 There is currently one admin user, with username="admin@yahoo.com" and password="password"
 
+## Accessing the site
 
+You can find the site at: https://techbenders-peer-evaluation.herokuapp.com/
