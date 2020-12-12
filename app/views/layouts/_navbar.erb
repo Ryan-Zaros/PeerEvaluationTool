@@ -31,6 +31,13 @@
             <% end %>
           </li>        
         <% else %>
+          <li >
+            <span style="color: white;">
+              <a>
+                <%= current_user.email %>
+              </a>
+            </span>
+          </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
               <span class="glyphicon glyphicon-log-out" style="color: white;"></span>&nbsp;<span style="color: white;">Sign Out</span>

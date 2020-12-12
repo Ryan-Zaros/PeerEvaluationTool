@@ -31,11 +31,6 @@
     <%= f.collection_select(:role_id, Role.all, :id, :name) %>
   </div>
 
-  <div class="field">
-    <%= f.label :admin %><br />
-    <%= f.check_box :admin %>
-  </div>
-
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
