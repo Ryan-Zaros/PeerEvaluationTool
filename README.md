@@ -1,9 +1,4 @@
 # Peer Evaluation Tool
-Techbenders: Omer Alrefaai, Xinyi Chen, Bryce Polito, Ryan Shaffer
-
-CSE 3901 (9417) AU20    
-
-## Accessing the site
 
 You can find the site at: https://techbenders-peer-evaluation.herokuapp.com/
 
